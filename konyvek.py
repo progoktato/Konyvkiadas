@@ -149,8 +149,8 @@ print("Legalább kétszer, nagyobb példányszámban újra kiadott könyvek:")
 kiadasok_szama = dict()
 elso_kiadas_peldanyszama = dict()
 
-# a kiadásokat a leírásuk szerint csoportosítjuk, és megszámoljuk, hogy hány kiadás tartozik egy-egy leíráshoz
-# a példányszámokat is összesítjük, hogy később ki tudjuk írni, hogy melyik könyvből hány példányt adtak ki összesen
+# A könyvek listáját végigjárva megvizsgáljuk, hogy mely könyveket adták ki legalább kétszer újra nagyobb példányszámban, mint az első kiadáskor.
+# Ehhez két szótárat használunk: az egyikben a könyvek leírása alapján tároljuk, hogy hányszor adták ki újra a könyvet, a másikban pedig azt, hogy az első kiadáskor hány példányban adták ki a könyvet.
 for konyv in konyvek:
     if konyv["leiras"] not in kiadasok_szama:
         kiadasok_szama[konyv["leiras"]] = 0
